@@ -1,0 +1,343 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Why Choose Us Section - Simple Layout */
+.why-choose-us-section {
+    padding: var(--space-lg) 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03), rgba(118, 75, 162, 0.03));
+}
+
+/* Center the main heading */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: var(--space-sm);
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    line-height: 1.4;
+}
+
+/* Desktop & Tablet Layout: Left content, Right image */
+.why-choose-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Left side content */
+.content-text {
+    text-align: left;
+}
+
+.content-text p,
+.feature-text p {
+    font-size: 1.1rem !important; /* As requested */
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+}
+
+.feature-item {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    align-items: flex-start;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.feature-text h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+/* Buttons */
+.cta-buttons {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.btn {
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-normal);
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Right side image */
+.content-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-vector {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 8px 20px rgba(102, 126, 234, 0.15));
+}
+
+/* Mobile Layout: Stack vertically */
+@media (max-width: 767px) {
+    .why-choose-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        text-align: center;
+    }
+    
+    .content-text {
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .content-text p,
+    .feature-text p {
+        font-size: 1rem !important;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .hero-vector {
+        max-width: 280px;
+        margin-top: var(--space-md);
+    }
+}
+
+    </style>
+   </head>
+   <body>
+     <!-- Home Section -->
+            <section class="content-section home-section active" id="home" data-section="home">
+                <div class="container">
+                    <div class="hero">
+                        <div class="hero-content">
+                            <div class="hero-subtitle">Modern IT Solutions</div>
+                            <h1 class="hero-title">
+                                 Driving Business Success Through  Innovation<span class="gradient-text">Technology</span> Experiences
+                            </h1>
+                            <p class="hero-description">
+                                Digital Excellence Modernize your
+                                business architecture with Conquer Infotech's next-generation Enterprise Planning and Human
+                                Capital platforms. We deliver best-in-class technology strategy and implementation expertise
+                                that optimizes business processes, minimizes operational expenditure, and drives sustainable
+                                competitive advantage for growing organizations.
+                            </p>
+                            <div class="hero-buttons">
+                                <a class="btn btn-primary" data-section="contact">Get Started</a>
+                                <a class="btn btn-secondary" data-section="about">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="hero-visual">
+                           <img src="/images/back 2-Photoroom.png" alt="Web Development" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <section class="why-choose-us-section">
+    <div class="container">
+        <h2 class="section-title">Why Choose ConquerTech?</h2>
+        <p class="section-subtitle">Your trusted partner for innovative business solutions</p>
+        
+        <div class="why-choose-content">
+            <!-- Text Content Left -->
+            <div class="content-text">
+                <div class="why-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <div class="feature-text">
+                            <h4>Industry Expertise</h4>
+                            <p>Over 10 years of experience delivering cutting-edge technology solutions to businesses worldwide.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">💡</div>
+                        <div class="feature-text">
+                            <h4>Innovation First</h4>
+                            <p>We leverage the latest technologies including AI/ML, cloud services, and modern ERP systems to transform your business.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">
+                            <h4>Reliable Support</h4>
+                            <p>24/7 dedicated support team ensuring your systems run smoothly with 99.9% uptime guarantee.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">📈</div>
+                        <div class="feature-text">
+                            <h4>Proven Results</h4>
+                            <p>500+ successful implementations with measurable ROI improvements for our clients across various industries.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">Get Started Today</button>
+                    <button class="btn btn-secondary">View Case Studies</button>
+                </div>
+            </div>
+            
+            <!-- Vector Image Right -->
+            <div class="content-image">
+                <img src="images/people-Photoroom-pica.png" alt="Why Choose ConquerTech - Professional Business Solutions" class="hero-vector">
+            </div>
+        </div>
+    </div>
+
+
+      <div class="container">
+                    <div class="section">
+                        <h2 class="section-title">Our Products</h2>
+                        <p class="section-subtitle">
+                            Comprehensive technology solutions designed to meet your business needs
+                        </p>
+
+                        <div class="grid grid-2">
+                            <div class="card">
+                                <h3 style="color: var(--primary); margin-bottom: var(--space-md); font-size: 1.4rem;">Enterprise Software</h3>
+                                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-md);">
+                                    Custom enterprise applications built with scalability, security, and performance in mind.
+                                    Streamline your business processes with our tailored software solutions.
+                                </p>
+                                <ul style="color: var(--text-secondary); margin-left: var(--space-md);">
+                                    <li>CRM Systems</li>
+                                    <li>ERP Solutions</li>
+                                    <li>Inventory Management</li>
+                                    <li>Financial Management</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <h3 style="color: var(--primary); margin-bottom: var(--space-md); font-size: 1.4rem;">Mobile Applications</h3>
+                                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-md);">
+                                    Native and cross-platform mobile applications that deliver exceptional user experiences
+                                    and drive customer engagement across all devices.
+                                </p>
+                                <ul style="color: var(--text-secondary); margin-left: var(--space-md);">
+                                    <li>iOS Applications</li>
+                                    <li>Android Applications</li>
+                                    <li>Cross-platform Solutions</li>
+                                    <li>Progressive Web Apps</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <h3 style="color: var(--primary); margin-bottom: var(--space-md); font-size: 1.4rem;">Cloud Infrastructure</h3>
+                                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-md);">
+                                    Scalable cloud solutions that provide flexibility, reliability, and cost-effectiveness
+                                    for businesses of all sizes.
+                                </p>
+                                <ul style="color: var(--text-secondary); margin-left: var(--space-md);">
+                                    <li>Cloud Migration</li>
+                                    <li>Infrastructure as a Service</li>
+                                    <li>Backup & Recovery</li>
+                                    <li>Security Management</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <h3 style="color: var(--primary); margin-bottom: var(--space-md); font-size: 1.4rem;">AI & Analytics</h3>
+                                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-md);">
+                                    Advanced analytics and artificial intelligence solutions that unlock insights
+                                    and automate complex business processes.
+                                </p>
+                                <ul style="color: var(--text-secondary); margin-left: var(--space-md);">
+                                    <li>Business Intelligence</li>
+                                    <li>Machine Learning</li>
+                                    <li>Data Analytics</li>
+                                    <li>Process Automation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</section>
+
+
+
+   </body>
+   </html>
+  
